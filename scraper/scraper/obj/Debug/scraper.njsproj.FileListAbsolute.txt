@@ -1,0 +1,3 @@
+C:\Projekty_VS\scraper\scraper\scraper\obj\Debug\scraper.njsproj.AssemblyReference.cache
+C:\Projekty_VS\scraper\scraper\scraper\obj\Debug\scraper.njsproj.CoreCompileInputs.cache
+C:\Projekty_VS\scraper\scraper\scraper\bin\Microsoft.NodejsTools.WebRole.dll
