@@ -8,16 +8,6 @@ const siteDetails = {
     pageurl: 'https://stats.pancernik.info/log/2021-09-24/3'
 }
 
-const getUsername = function () {
-    return 'testUser34234234';
-}
-
-const getPassword = function () {
-    return 'password12345';
-}
-
-
-
 const chromeOptions = {
     headless: false,
     slowMo: 10,
@@ -35,13 +25,10 @@ const chromeOptions = {
 
 
     const response = await pollForRequestResults(apiKey, requestId);
-   // console.log('response  ' + response);
 
     //enter response
     await page.evaluate(`document.getElementById("g-recaptcha-response").innerHTML="${response}";`);
 
-
-    //await getDOM(page);
     let bodyHTML = await page.evaluate(() => document.documentElement.outerHTML);
 
     //console.log(bodyHTML);
@@ -54,22 +41,9 @@ const chromeOptions = {
     });
 
 
-
 })()
 
-async function getDOM(page) {
-    // Wait for the required DOM to be rendered
-    let dom = await page.waitForSelector('.table table-striped table-bordered');
-    // Get the link to all the required books
-/*    let urls = await page.$$eval('section ol > li', links => {
-        // Make sure the book to be scraped is in stock
-        //links = links.filter(link => link.querySelector('.instock.availability > i').textContent !== "In stock")
-        // Extract the links from the data
-        //links = links.map(el => el.querySelector('h3 > a').href)
-        return links;
-    });*/
-    console.log(dom);
-}
+
 async function initiateCaptchaRequest(apiKey) {
     const formData = {
         method: 'userrecaptcha',
