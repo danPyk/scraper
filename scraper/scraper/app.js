@@ -16,7 +16,7 @@ const getPassword = function () {
     return 'password12345';
 }
 
-const apiKey = 'fd6ac9eeea6897ae06478b86bbe22ee8';
+
 
 const chromeOptions = {
     headless: false,
