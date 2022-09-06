@@ -4,8 +4,8 @@ const poll = require('promise-poller').default;
 const fs = require('fs');
 
 const siteDetails = {
-    sitekey: '6LdMY0YUAAAAAO_ctUhtILG_I2Ml3OBonlkZPsa7',
-    pageurl: 'https://stats.pancernik.info/log/2021-09-24/3'
+    sitekey: '',
+    pageurl: ''
 }
 
 const chromeOptions = {
@@ -20,7 +20,7 @@ const chromeOptions = {
     const page = await browser.newPage();
 
 
-    await page.goto('https://stats.pancernik.info/log/2021-09-24/3', { waitUntil: 'networkidle0' });
+    await page.goto('', { waitUntil: 'networkidle0' });
     const requestId = await initiateCaptchaRequest(apiKey);
 
 
